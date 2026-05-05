@@ -1,0 +1,9 @@
+string      object_id
+string      semantic_label
+float32[]   clip_embedding
+float32[3]  position_xyz
+float32[3]  bbox_min_xyz
+float32[3]  bbox_max_xyz
+bool        is_dynamic
+string      ib_cluster_id
+float32     task_relevance

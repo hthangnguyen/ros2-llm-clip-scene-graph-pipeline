@@ -1,0 +1,6 @@
+ib:
+  beta: 1.0
+  tau: 0.05
+  alpha: 0.2
+  top_l: 3
+  update_rate_hz: 1.0

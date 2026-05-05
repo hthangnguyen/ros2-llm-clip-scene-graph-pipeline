@@ -1,0 +1,5 @@
+dynablox:
+  voxel_size: 0.1
+  T_d: 1.5
+  T_w: 10
+  neighbor_mode: 6

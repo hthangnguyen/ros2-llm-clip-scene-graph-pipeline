@@ -1,0 +1,11 @@
+lp2:
+  prediction_horizons_sec: [10.0, 30.0, 60.0]
+  walking_speed_mps: 1.2
+  path_grid_resolution_m: 1.0
+  path_grid_k_nearest_to_objects: 3
+  min_dwell_sec: 1.0
+  llm_model: "gemma3:latest"
+  llm_prompt_strategy: "zero_shot"
+  llm_call_rate_hz: 0.2
+  llm_timeout_sec: 10.0
+  fallback_distribution: "uniform"

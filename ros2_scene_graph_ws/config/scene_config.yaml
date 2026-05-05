@@ -1,0 +1,69 @@
+scene:
+  room_dimensions: [10.0, 8.0, 3.0]
+
+  objects:
+    # Kitchen area (x: 1-4, y: 1-4)
+    - {id: "obj_001", label: "mug",      position: [2.0, 2.0, 0.75], size: [0.10, 0.10, 0.12], color_rgb: [0.8, 0.2, 0.2], task_relevant: true}
+    - {id: "obj_002", label: "kettle",   position: [2.5, 2.0, 0.75], size: [0.20, 0.15, 0.25], color_rgb: [0.6, 0.6, 0.6], task_relevant: false}
+    - {id: "obj_003", label: "toaster",  position: [3.0, 2.0, 0.75], size: [0.25, 0.15, 0.20], color_rgb: [0.5, 0.5, 0.5], task_relevant: false}
+    - {id: "obj_004", label: "plate",    position: [2.0, 2.5, 0.75], size: [0.25, 0.25, 0.03], color_rgb: [0.9, 0.9, 0.9], task_relevant: false}
+    - {id: "obj_005", label: "knife",    position: [2.5, 2.5, 0.75], size: [0.20, 0.03, 0.02], color_rgb: [0.7, 0.7, 0.8], task_relevant: false}
+    # Work area (x: 6-9, y: 1-4)
+    - {id: "obj_006", label: "laptop",   position: [6.5, 2.0, 0.75], size: [0.35, 0.25, 0.02], color_rgb: [0.2, 0.2, 0.3], task_relevant: true}
+    - {id: "obj_007", label: "monitor",  position: [7.5, 2.0, 1.10], size: [0.50, 0.05, 0.35], color_rgb: [0.1, 0.1, 0.1], task_relevant: false}
+    - {id: "obj_008", label: "keyboard", position: [7.5, 2.5, 0.75], size: [0.40, 0.15, 0.03], color_rgb: [0.3, 0.3, 0.3], task_relevant: false}
+    - {id: "obj_009", label: "desk_lamp",position: [8.0, 2.0, 0.75], size: [0.10, 0.10, 0.40], color_rgb: [1.0, 0.9, 0.5], task_relevant: false}
+    - {id: "obj_010", label: "notebook", position: [6.5, 2.5, 0.75], size: [0.20, 0.15, 0.02], color_rgb: [0.9, 0.8, 0.6], task_relevant: true}
+    # Seating area (x: 1-4, y: 5-7)
+    - {id: "obj_011", label: "chair",    position: [2.0, 5.5, 0.00], size: [0.50, 0.50, 0.90], color_rgb: [0.6, 0.4, 0.2], task_relevant: true}
+    - {id: "obj_012", label: "sofa",     position: [2.5, 6.5, 0.00], size: [1.80, 0.80, 0.90], color_rgb: [0.4, 0.3, 0.5], task_relevant: true}
+    - {id: "obj_013", label: "coffee_table", position: [3.5, 5.5, 0.00], size: [0.80, 0.50, 0.45], color_rgb: [0.5, 0.3, 0.1], task_relevant: false}
+    - {id: "obj_014", label: "book",     position: [3.5, 5.5, 0.46], size: [0.20, 0.15, 0.03], color_rgb: [0.8, 0.5, 0.2], task_relevant: true}
+    - {id: "obj_015", label: "remote",   position: [3.0, 5.5, 0.46], size: [0.15, 0.05, 0.02], color_rgb: [0.2, 0.2, 0.2], task_relevant: false}
+    # Transit/boundary objects (distributed)
+    - {id: "obj_016", label: "plant",    position: [1.0, 7.0, 0.00], size: [0.30, 0.30, 0.60], color_rgb: [0.2, 0.6, 0.2], task_relevant: false}
+    - {id: "obj_017", label: "bin",      position: [9.0, 1.0, 0.00], size: [0.30, 0.30, 0.40], color_rgb: [0.4, 0.4, 0.4], task_relevant: false}
+    - {id: "obj_018", label: "coat_rack",position: [9.0, 7.5, 0.00], size: [0.20, 0.20, 1.70], color_rgb: [0.5, 0.3, 0.1], task_relevant: false}
+    - {id: "obj_019", label: "door",     position: [9.8, 4.0, 0.00], size: [0.10, 0.90, 2.00], color_rgb: [0.7, 0.5, 0.3], task_relevant: true}
+    - {id: "obj_020", label: "whiteboard", position: [5.0, 0.1, 1.00], size: [2.00, 0.05, 1.20], color_rgb: [0.95, 0.95, 0.95], task_relevant: false}
+
+  near_miss_objects:
+    - {id: "obj_nm_001", label: "plant_small", position: [4.0, 4.0, 0.0], size: [0.20, 0.20, 0.40], color_rgb: [0.3, 0.7, 0.3], task_relevant: false}
+    - {id: "obj_nm_002", label: "stool",       position: [5.0, 3.0, 0.0], size: [0.30, 0.30, 0.50], color_rgb: [0.6, 0.5, 0.3], task_relevant: false}
+    - {id: "obj_nm_003", label: "box",         position: [6.0, 5.0, 0.0], size: [0.40, 0.40, 0.30], color_rgb: [0.7, 0.6, 0.4], task_relevant: false}
+
+  tasks:
+    - "pick up the mug"
+    - "find a seat"
+    - "locate the exit"
+    - "find something to read"
+    - "put the laptop on the desk"
+
+  camera:
+    fov_deg: 60.0
+    image_width: 640
+    image_height: 480
+    position: [5.0, 4.0, 2.5]
+    look_at: [5.0, 4.0, 0.0]
+
+agents:
+  - id: "agent_primary"
+    start_position: [1.0, 1.0, 0.0]
+    speed_mps: 1.2
+    path_mode: "stochastic"
+    stochastic_seed: 42
+    waypoints:
+      - {object_id: "obj_001", dwell_sec: 5.0, probability: 0.30}
+      - {object_id: "obj_006", dwell_sec: 8.0, probability: 0.25}
+      - {object_id: "obj_011", dwell_sec: 5.0, probability: 0.20}
+      - {object_id: "obj_014", dwell_sec: 4.0, probability: 0.15}
+      - {object_id: "obj_019", dwell_sec: 2.0, probability: 0.10}
+
+  - id: "agent_secondary"
+    start_position: [8.0, 6.5, 0.0]
+    speed_mps: 2.5
+    path_mode: "deterministic"
+    waypoints:
+      - {object_id: "obj_016", dwell_sec: 2.0}
+      - {object_id: "obj_018", dwell_sec: 2.0}
+      - {object_id: "obj_017", dwell_sec: 2.0}
