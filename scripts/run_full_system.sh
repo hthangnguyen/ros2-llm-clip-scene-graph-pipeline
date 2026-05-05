@@ -4,11 +4,11 @@ echo "Initializing environment..."
 
 # 1. Environment Setup
 source /opt/ros/humble/setup.bash
-eval "$(/home/aidev1/miniconda3/bin/conda shell.bash hook)"
-export PYTHONPATH=/home/aidev1/miniconda3/envs/auto-robot/lib/python3.10/site-packages:$PYTHONPATH
-export PATH=/home/aidev1/miniconda3/envs/auto-robot/bin:$PATH
+eval "$(conda shell.bash hook)"
+export PYTHONPATH=/path/python3.10/site-packages:$PYTHONPATH
+export PATH=/envs/auto-robot/bin:$PATH
 
-cd /home/aidev1/research/ros2-robot/ros2_scene_graph_ws
+cd ros2_scene_graph_ws
 source install/setup.bash
 mkdir -p eval logs
 
