@@ -4,19 +4,15 @@ echo "Initializing environment..."
 
 # 1. Environment Setup
 source /opt/ros/humble/setup.bash
-eval "$(conda shell.bash hook)"
-export PYTHONPATH=/path/python3.10/site-packages:$PYTHONPATH
-export PATH=/envs/auto-robot/bin:$PATH
+eval "$(/home/aidev1/miniconda3/bin/conda shell.bash hook)"
+export PYTHONPATH=/home/aidev1/miniconda3/envs/auto-robot/lib/python3.10/site-packages:$PYTHONPATH
+export PATH=/home/aidev1/miniconda3/envs/auto-robot/bin:$PATH
 
-<<<<<<< HEAD
 # NVIDIA Headless Rendering Fix
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
 
 cd /home/aidev1/research/ros2-robot/ros2_scene_graph_ws
-=======
-cd ros2_scene_graph_ws
->>>>>>> ef0aad89e9418d885cecb35b329316abfe204000
 source install/setup.bash
 mkdir -p eval logs
 
